@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Football Boots</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Elite Boots</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon" id="cart-icon">
+                🛒 <span id="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart">×</button>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h4>Total: $<span id="cart-total">0</span></h4>
+            <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>Premium Football Boots</h1>
+            <p>Step into Greatness</p>
+            <button class="cta-button">View Collection</button>
+        </section>
+
+        <section class="products" id="products">
+            <h2>Nike Mercurial Collection</h2>
+            <div class="product-row">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Nike Mercurial Superfly 9">
+                    <div class="product-info">
+                        <h3>Nike Mercurial Superfly 9 Elite</h3>
+                        <p class="description">The latest flagship model featuring Nike's most advanced speed technology. Perfect for explosive acceleration and precise control.</p>
+                        <ul class="features">
+                            <li>Flyknit 360° construction</li>
+                            <li>Nike Grip System</li>
+                            <li>Carbon Fiber Sole</li>
+                        </ul>
+                        <span class="price">$299.99</span>
+                        <div class="button-group">
+                            <button class="buy-now-button" onclick="buyNow({
+                                name: 'Nike Mercurial Superfly 9 Elite',
+                                price: 299.99,
+                                image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500'
+                            })">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/17c9cb39-4f79-4c49-9590-4817cd61c713/mercurial-vapor-15-elite-fg-firm-ground-soccer-cleats-ZvMf1c.png" alt="Nike Mercurial Vapor 15">
+                    <div class="product-info">
+                        <h3>Nike Mercurial Vapor 15 Elite</h3>
+                        <p class="description">Low-cut design for natural movement. Enhanced touch and feel with Vaporposite+ upper technology.</p>
+                        <ul class="features">
+                            <li>Vaporposite+ upper</li>
+                            <li>Avanced Speed Plate</li>
+                            <li>Lightweight Design</li>
+                        </ul>
+                        <span class="price">$249.99</span>
+                        <div class="button-group">
+                            <button class="buy-now-button" onclick="buyNow({
+                                name: 'Nike Mercurial Vapor 15 Elite',
+                                price: 249.99,
+                                image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/17c9cb39-4f79-4c49-9590-4817cd61c713/mercurial-vapor-15-elite-fg-firm-ground-soccer-cleats-ZvMf1c.png'
+                            })">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-row">
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/33533fe2-1157-4001-896e-1803b30659c8/mercurial-superfly-9-academy-mg-multi-ground-soccer-cleats-P7qNqF.png" alt="Nike Mercurial Superfly Academy">
+                    <div class="product-info">
+                        <h3>Nike Mercurial Superfly Academy</h3>
+                        <p class="description">Perfect for developing players. Combines comfort with essential Mercurial speed features.</p>
+                        <ul class="features">
+                            <li>Dynamic Fit Collar</li>
+                            <li>Multi-Ground Studs</li>
+                            <li>Durable Construction</li>
+                        </ul>
+                        <span class="price">$179.99</span>
+                        <div class="button-group">
+                            <button class="buy-now-button" onclick="buyNow({
+                                name: 'Nike Mercurial Superfly Academy',
+                                price: 179.99,
+                                image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/33533fe2-1157-4001-896e-1803b30659c8/mercurial-superfly-9-academy-mg-multi-ground-soccer-cleats-P7qNqF.png'
+                            })">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/d3eb254d-0901-4158-956a-4610180545e5/mercurial-superfly-9-pro-fg-firm-ground-soccer-cleats-LM6v11.png" alt="Nike Mercurial Superfly Pro">
+                    <div class="product-info">
+                        <h3>Nike Mercurial Superfly 9 Pro</h3>
+                        <p class="description">Professional-grade performance at a mid-tier price. Features key Mercurial technologies.</p>
+                        <ul class="features">
+                            <li>NikeSkin Technology</li>
+                            <li>Pro-level Traction</li>
+                            <li>Responsive Feel</li>
+                        </ul>
+                        <span class="price">$219.99</span>
+                        <div class="button-group">
+                            <button class="buy-now-button" onclick="buyNow({
+                                name: 'Nike Mercurial Superfly 9 Pro',
+                                price: 219.99,
+                                image: 'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/d3eb254d-0901-4158-956a-4610180545e5/mercurial-superfly-9-pro-fg-firm-ground-soccer-cleats-LM6v11.png'
+                            })">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: aghaaliakbar@gmail.com</p>
+                <p>Phone: +92 321 5300265</p>
+                <p>Fast Shipping Worldwide</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://instagram.com/hassanali_zz" class="social-link">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/instagram.svg" alt="Instagram">
+                    @hassanali_zz
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
